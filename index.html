@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueFileType</title>
+</head>
+
+<body>
+    <br>
+    <label for="file" style="border:3px solid">
+        <input type="file" id="file" style="display:none">
+        <span>上傳圖檔</span>
+    </label>
+    <br>
+    <h3>
+        <div>檔案格式:<span id="typeName"></span></div>
+    </h3>
+
+    <script src="js/trueFile.js"></script>
+    <script>
+        var fileInfo = {}
+        fileInfo.id = "#file" //upfile的Id
+        fileInfo.displayId = "#typeName" //如果需要回寫dom
+        GetFileTrueType(fileInfo);
+
+        console.log(fileInfo.type)
+    </script>
+</body>
+
+</html>
